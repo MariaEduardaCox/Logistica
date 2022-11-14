@@ -43,4 +43,18 @@ public class Condutor {
     public void setSalario(double salario) {
         this.salario = salario;
     }
+
+    @Override
+    public String toString() {
+        return "Nome: " + nome + "\n" +
+                "CPF: " + cpf + "\n" +
+                "Data de nascimento: " + dataN + "\n" +
+                "Salário: " + salario + "\n";
+
+    }
+
+    public int compareTo(Object other) {
+        Condutor condutor = (Condutor) other;
+        return this.cpf.compareTo(condutor.cpf);
+    }
 }

@@ -1,11 +1,11 @@
 public abstract class VeiculoA implements Veiculo{
-    private String nome;
-    private String tipoVeiculo;
-    private String variacaoCombustivel;
-    private String placa;
-    private double consumoKm;
+    protected String nome;
+    protected String tipoVeiculo;
+    protected String variacaoCombustivel;
+    protected String placa;
+    protected double consumoKm;
 
-    public VeiculoA(String nome, String tipoVeiculo, String variacaoCombustivel, String placa, double consumoKm){
+    public VeiculoA(String nome, String tipoVeiculo, String variacaoCombustivel, String placa, double consumoKm) {
         this.nome = nome;
         this.tipoVeiculo = tipoVeiculo;
         this.variacaoCombustivel = variacaoCombustivel;
@@ -52,5 +52,9 @@ public abstract class VeiculoA implements Veiculo{
     public void setConsumoKm(double consumoKm) {
         this.consumoKm = consumoKm;
     }
-}
 
+    public int compareTo(Object other) {
+        VeiculoA veiculo = (VeiculoA) other;
+        return this.nome.compareTo(veiculo.nome);
+    }
+}

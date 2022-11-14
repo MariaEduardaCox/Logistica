@@ -47,4 +47,16 @@ public class Caminhao extends VeiculoA{
     public String getPlacaV(String placaV){
         return placaV;
     }
+     
+
+    @Override
+    public String toString(){
+        return "Nome: " + nome + "\n" +
+                "Tipo do veículo: " + tipoVeiculo + "\n" +
+                "Tipo do combustível: " + variacaoCombustivel + "\n" +
+                "Placa: " + placa + "\n" +
+                "Consumo km: " + consumoKm + "\n" +
+                "Eixos: " + eixos + "\n";
+
+    }
 }
