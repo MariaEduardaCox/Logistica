@@ -4,10 +4,10 @@ public class Viagem implements Comparable<Viagem>{
     private String cidadeOrigem;
     private String cidadeDestino;
     private double distancia;
-    private VeiculoA veiculo;
-    private Condutor condutor;
+    private String veiculo;
+    private String condutor;
 
-    public Viagem(String cidadeOrigem, String cidadeDestino, double distancia, VeiculoA veiculo, Condutor condutor) {
+    public Viagem(String cidadeOrigem, String cidadeDestino, double distancia, String veiculo, String condutor) {
         this.cidadeOrigem = cidadeOrigem;
         this.cidadeDestino = cidadeDestino;
         this.distancia = distancia;
@@ -39,26 +39,25 @@ public class Viagem implements Comparable<Viagem>{
         this.distancia = distancia;
     }
 
-    public Veiculo getVeiculo() {
+    public String getVeiculo() {
         return veiculo;
     }
 
-    public void setVeiculo(VeiculoA veiculo) {
+    public void setVeiculo(String veiculo) {
         this.veiculo = veiculo;
     }
 
-    public Condutor getCondutor() {
+    public String getCondutor() {
         return condutor;
     }
 
-    public void setCondutor(Condutor condutor) {
+    public void setCondutor(String condutor) {
         this.condutor = condutor;
     }
 
-    public double custoViagem(double gastoConsumo, double dias) {
-        gastoConsumo = veiculo.gastoCombustivel(1000, 500, 1000, 5);
+    public double custoViagem(double gastoConsumo, double dias, double valorDiaria) {
         dias = distancia / 700;
-        return (dias * (condutor.getSalario() / 20)) + gastoConsumo;
+        return dias * valorDiaria + gastoConsumo;
     }
 
     @Override
@@ -72,6 +71,7 @@ public class Viagem implements Comparable<Viagem>{
 
     @Override
     public int compareTo(Viagem other) {
-        return (int) (this.custoViagem(100, 2)- other.custoViagem(50,2));
+        Viagem v = (Viagem) other;
+        return (int) (this.distancia - v.distancia);
     }
 }

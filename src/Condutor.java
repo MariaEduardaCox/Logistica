@@ -1,4 +1,4 @@
-public class Condutor {
+public class Condutor implements Comparable {
 
     private String nome;
     private String cpf;
@@ -54,7 +54,7 @@ public class Condutor {
     }
 
     public int compareTo(Object other) {
-        Condutor condutor = (Condutor) other;
-        return this.cpf.compareTo(condutor.cpf);
+        Condutor c = (Condutor) other;
+        return this.cpf.compareTo(c.cpf);
     }
 }

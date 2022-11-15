@@ -1,3 +1,5 @@
+import java.util.List;
+
 public class FolhaDePagamento {
     private String mes;
     private String ano;
@@ -23,9 +25,19 @@ public class FolhaDePagamento {
         this.ano = ano;
     }
 
-    public double totalAPagar(){
-
+    public static double totalAPagar(List<Condutor> condutores){
+        double total = 0;
+        for(Condutor i : condutores){
+            total = total + i.getSalario();
+        }
+        return total;
     }
 
+    public static void imprimir(List<Condutor> condutores){
+        for(Condutor i : condutores){
+            System.out.println("Nome: " + i.getNome() + "Salário: " + i.getSalario());
+        }
+        System.out.println(totalAPagar(condutores));
+    }
 
 }

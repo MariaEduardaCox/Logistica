@@ -14,15 +14,7 @@ public class Caminhao extends VeiculoA{
     public void setEixos(int eixos) {
         this.eixos = eixos;
     }
-    @Override
-    public double gastoCombustivel(double litro, double km, double distancia, double valorC){
-        double lk = litro/km;
-        double quilometragemTotal = distancia;
-        double gastoTotal = quilometragemTotal * valorC;
-        System.out.println("Sua moto faz: " + lk + "litros por km");
-        System.out.println("Gasto total: " + gastoTotal);
-        return lk;
-    }
+
     @Override
     public void setTipoCombustivel(String tipoComsbutivel){
 

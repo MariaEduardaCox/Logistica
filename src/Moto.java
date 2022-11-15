@@ -13,15 +13,7 @@ public class Moto extends VeiculoA{
     public void setCilindradas(double cilindradas) {
         this.cilindradas = cilindradas;
     }
-    @Override
-    public double gastoCombustivel(double litro, double km, double distancia, double valorC){
-      double lk = litro/km;
-      double quilometragemTotal = distancia;
-      double gastoTotal = quilometragemTotal * valorC;
-      System.out.println("Sua moto faz: " + lk + "litros por km");
-      System.out.println("Gasto total: " + gastoTotal);
-        return lk;
-    }
+
     @Override
     public void setTipoCombustivel(String tipoComsbutivel){
 

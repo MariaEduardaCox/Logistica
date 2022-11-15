@@ -1,4 +1,4 @@
-public abstract class VeiculoA implements Veiculo{
+public abstract class VeiculoA implements Veiculo, Comparable{
     protected String nome;
     protected String tipoVeiculo;
     protected String variacaoCombustivel;
@@ -53,8 +53,12 @@ public abstract class VeiculoA implements Veiculo{
         this.consumoKm = consumoKm;
     }
 
+    public double gastoCombustivel(double distancia, double valorC){
+        double total = (distancia/this.consumoKm) * valorC;
+        return total;
+    }
+
     public int compareTo(Object other) {
-        VeiculoA veiculo = (VeiculoA) other;
-        return this.nome.compareTo(veiculo.nome);
+        return nome.compareTo(nome);
     }
 }
