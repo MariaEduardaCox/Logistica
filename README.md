@@ -5,14 +5,15 @@ e seus modelos, condutores e o pagamento de cada funcionário.
 
 💻**Construção**
 
-A construção do código foi realizado com a linguagem de programação java
-com segmentos de programação orientada a objetos, possuindo interface com métodos abstratos.
+Java 
+
+Intellij
 
 📋**Pré-requisitos**
 
 Java Jdk
 
-Intellij
+IDE de preferência
 
 ▶️**Instalação**
 
